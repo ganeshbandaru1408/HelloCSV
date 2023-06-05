@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/HelloWorld" name="HelloWorld" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <CSV.csvToJson>
+                <headerPresent>Present</headerPresent>
+                <valueSeparator>,</valueSeparator>
+                <skipHeader>true</skipHeader>
+                <csvEmptyValues>Empty</csvEmptyValues>
+                <dataTypes>[{"Column Name Or Index":" mobile","Is Column Name":"Yes","Data Type":"Number"}]</dataTypes>
+            </CSV.csvToJson>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
